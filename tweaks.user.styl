@@ -9,8 +9,60 @@
 @preprocessor stylus
 @version      0.1.0
 @license      MIT
+
+@var checkbox monitor 'Enable dark mode for Monitor route' 1
 ==/UserStyle== */
 
 @-moz-document domain("userstyles.world") {
     :root { --hello: 'world' }
+}
+
+@-moz-document regexp("^https?://(.+\.userstyles.world|localhost)(:[0-9]+)?/[a-zA-Z0-9]{128}$") {
+    // Helper variable.
+    i = !important
+
+    html { scrollbar-color: #aaa #eee }
+
+    // Feat -> Dark mode for Monitor route.
+    if monitor {
+        body > .wrapper {
+            padding: 30px 8px
+
+            .row {
+                padding-top: 20px
+                align-items: flex-start
+                border-top: 1px solid #eee
+            }
+        }
+
+        // Responsive mode.
+        @media (max-width: 580px) {
+            h2 { width: 100% }
+            .row {
+                flex-direction: column i
+                align-items: center i
+                text-align: center i
+
+                // Fix 'memory usage' text.
+                .column:first-child { width: unset }
+            }
+        }
+
+        // Dark mode.
+        @media (prefers-color-scheme: dark) {
+            html { scrollbar-color: #444 #333 }
+            body {
+                color: #ccc
+                background-color: #222
+
+                .wrapper {
+                    .row { border-color: #333 }
+                    .metric { color: #999 }
+                }
+
+                // Invert colors for graphs.
+                canvas { filter: invert() hue-rotate(180deg) }
+            }
+        }
+    }
 }
