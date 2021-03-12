@@ -1,0 +1,24 @@
+#+STARTUP: nofold
+#+HTML: <div align="center">
+
+* UserStyles.world Tweaks
+Various tweaks for UserStyles.world platform.
+
+[[https://github.com/vednoc/dark-github/blob/master/changelog.org][https://img.shields.io/github/v/tag/userstyles-world/tweaks.svg?label=version&style=flat]]
+[[https://github.com/userstyles-world/example-style/stargazers][https://img.shields.io/github/stars/userstyles-world/tweaks.svg?style=flat]]
+[[https://github.com/userstyles-world/example-style/network][https://img.shields.io/github/forks/userstyles-world/tweaks.svg?color=007ec6&style=flat]]
+
+#+HTML: </div>
+
+** About
+This userstyle serves as an example of what is possible with Stylus (and
+Stylus-lang preprocessor), as well as some additional — opinionated — tweaks
+that can be applied to UserStyles.world platform.
+
+More information is available on [[https://github.com/openstyles/stylus/wiki/Writing-UserCSS][OpenStylus/Stylus/Writing UserCSS]] wiki.
+
+** Contributing
+If you have any feature requests, feel free to open an issue.
+
+** License
+Code released under the [[license][MIT]] license.
