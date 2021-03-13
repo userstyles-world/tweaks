@@ -10,6 +10,7 @@
 @version      0.1.0
 @license      MIT
 
+@var checkbox navbar  'Enable sticky navbar' 1
 @var checkbox newBars 'Enable new styles for nav/footer bars' 1
 @var checkbox monitor 'Enable dark mode for Monitor route' 1
 ==/UserStyle== */
@@ -20,6 +21,15 @@
     // This userstyle uses Stylus-lang preprocessor.
     // Complete preprocessor documentation at: https://stylus-lang.com
     // Writing UserCSS: https://github.com/openstyles/stylus/wiki/Writing-UserCSS
+
+    // Feat -> Sticky navbar.
+    if navbar {
+        nav {
+            position: sticky
+            z-index: 9
+            top: 0
+        }
+    }
 
     // Feat -> New nav/footer styles.
     if newBars {
