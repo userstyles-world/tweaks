@@ -14,7 +14,7 @@
 @var checkbox monitor 'Enable dark mode for Monitor route' 1
 ==/UserStyle== */
 
-@-moz-document domain("userstyles.world") {
+@-moz-document domain("userstyles.world"), regexp("http://localhost(:[0-9]+)?/.*") {
     :root { --hello: 'world' }
 
     // Feat -> New nav/footer styles.
