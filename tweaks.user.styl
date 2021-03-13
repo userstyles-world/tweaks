@@ -17,6 +17,10 @@
 @-moz-document domain("userstyles.world"), regexp("http://localhost(:[0-9]+)?/.*") {
     :root { --hello: 'world' }
 
+    // This userstyle uses Stylus-lang preprocessor.
+    // Complete preprocessor documentation at: https://stylus-lang.com
+    // Writing UserCSS: https://github.com/openstyles/stylus/wiki/Writing-UserCSS
+
     // Feat -> New nav/footer styles.
     if newBars {
         nav,
