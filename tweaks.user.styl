@@ -10,11 +10,33 @@
 @version      0.1.0
 @license      MIT
 
+@var checkbox newBars 'Enable new styles for nav/footer bars' 1
 @var checkbox monitor 'Enable dark mode for Monitor route' 1
 ==/UserStyle== */
 
 @-moz-document domain("userstyles.world") {
     :root { --hello: 'world' }
+
+    // Feat -> New nav/footer styles.
+    if newBars {
+        nav,
+        footer {
+            border: none
+            background: none
+
+            > div {
+                padding-top: 0 !important
+                padding-bottom: 0px !important
+                background-color: var(--bg-2)
+                box-shadow: 0 0 0 1px var(--bg-1)
+
+                > * { padding: 1rem 0 }
+            }
+        }
+
+        nav > div { border-radius: 0 0 0.5rem 0.5rem }
+        footer > div { border-radius: 0.5rem 0.5rem 0 0 }
+    }
 }
 
 @-moz-document regexp("^https?://(.+\.userstyles.world|localhost)(:[0-9]+)?/[a-zA-Z0-9]{128}$") {
