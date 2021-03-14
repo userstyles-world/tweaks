@@ -11,6 +11,7 @@
 @license      MIT
 
 @var checkbox navbar  'Enable sticky navbar' 1
+@var checkbox blurry  'Enable blurry navbar style' 1
 @var checkbox newBars 'Enable new styles for nav/footer bars' 1
 @var checkbox monitor 'Enable dark mode for Monitor route' 1
 ==/UserStyle== */
@@ -28,6 +29,21 @@
             position: sticky
             z-index: 9
             top: 0
+        }
+    }
+
+    // Feat -> Blurry navbar.
+    if blurry {
+        @supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
+            nav > div[class] {
+                background-color: #1d1d1de0
+                backdrop-filter: blur(4px) saturate(150%)
+                -webkit-backdrop-filter: blur(4px) saturate(150%)
+
+                @media (prefers-color-scheme: light) {
+                    background-color: #d0d0d0c0
+                }
+            }
         }
     }
 
