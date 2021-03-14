@@ -35,7 +35,11 @@
     // Feat -> Blurry navbar.
     if blurry {
         @supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
-            nav > div[class] {
+            // Setting class conditionally. Interop new- and old-bar styles.
+            class = (newBars) ? '> div[class]' : ''
+
+            // Generate it.
+            nav { class } {
                 background-color: #1d1d1de0
                 backdrop-filter: blur(4px) saturate(150%)
                 -webkit-backdrop-filter: blur(4px) saturate(150%)
