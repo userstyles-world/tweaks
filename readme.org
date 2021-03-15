@@ -4,9 +4,9 @@
 * UserStyles.world Tweaks
 Various tweaks for UserStyles.world platform.
 
-[[https://github.com/vednoc/dark-github/blob/master/changelog.org][https://img.shields.io/github/v/tag/userstyles-world/tweaks.svg?label=version&style=flat]]
-[[https://github.com/userstyles-world/example-style/stargazers][https://img.shields.io/github/stars/userstyles-world/tweaks.svg?style=flat]]
-[[https://github.com/userstyles-world/example-style/network][https://img.shields.io/github/forks/userstyles-world/tweaks.svg?color=007ec6&style=flat]]
+[[https://github.com/userstyles-world/tweaks/releases][https://img.shields.io/github/v/tag/userstyles-world/tweaks.svg?label=version&style=flat]]
+[[https://github.com/userstyles-world/tweaks/stargazers][https://img.shields.io/github/stars/userstyles-world/tweaks.svg?style=flat]]
+[[https://github.com/userstyles-world/tweaks/network][https://img.shields.io/github/forks/userstyles-world/tweaks.svg?color=007ec6&style=flat]]
 [[https://raw.githubusercontent.com/userstyles-world/tweaks/main/tweaks.user.styl][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
 
 #+HTML: <img src="https://user-images.githubusercontent.com/18245694/111090605-9cc4ce00-8530-11eb-8716-2c1df40f32e1.png" width="100%"/>
