@@ -46,11 +46,14 @@
 
             // Generate it.
             nav { class } {
-                background-color: #1d1d1de0
+                $c = #1d1d1d
+                background-color: transparentify($c, $c, 0.8)
                 backdrop-filter: blur(4px) saturate(150%)
                 -webkit-backdrop-filter: blur(4px) saturate(150%)
 
                 @media (prefers-color-scheme: light) {
+                    $c = #d0d0d0
+                    background-color: transparentify($c, $c, 0.7)
                     background-color: #d0d0d0c0
                 }
             }
