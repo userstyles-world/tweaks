@@ -20,7 +20,10 @@
 // Complete preprocessor documentation at: https://stylus-lang.com
 // Writing UserCSS: https://github.com/openstyles/stylus/wiki/Writing-UserCSS
 
-@-moz-document domain("userstyles.world"), regexp("http://localhost(:[0-9]+)?/.*") {
+@-moz-document domain("userstyles.world"), regexp("https?://localhost(:[0-9]+)?/.*") {
+    // Stylus-lang helper variables.
+    i = !important
+
     :root { --hello: 'world' }
 
     // Feat -> Sticky navbar.
@@ -71,13 +74,6 @@
         nav > div { border-radius: 0 0 0.5rem 0.5rem }
         footer > div { border-radius: 0.5rem 0.5rem 0 0 }
     }
-}
-
-@-moz-document regexp("^https?://(.+\.userstyles.world|localhost)(:[0-9]+)?/[a-zA-Z0-9]{128}$") {
-    // Helper variable.
-    i = !important
-
-    html { scrollbar-color: #aaa #eee }
 
     // Feat -> Dark mode for Monitor route.
     if monitor {
