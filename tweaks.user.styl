@@ -24,6 +24,20 @@
     // Stylus-lang helper variables.
     i = !important
 
+    // Dark mode color variables.
+    darkModeColors = @block {
+        --bg-1: #101010
+        --bg-2: #1d1d1d
+        --bg-3: #2a2a2a
+        --bg-4: #363636
+        --bg-5: #434343
+        --fg-1: #dddddd
+        --fg-2: #bebebe
+        --fg-3: #a0a0a0
+        --fg-4: #818181
+        --fg-5: #636363
+    }
+
     // Embed userstyle version.
     :root {
         --version: 'version 1.1.0'
@@ -85,18 +99,7 @@
     if monitor {
         // Dark mode colors.
         @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-1: #101010
-                --bg-2: #1d1d1d
-                --bg-3: #2a2a2a
-                --bg-4: #363636
-                --bg-5: #434343
-                --fg-1: #dddddd
-                --fg-2: #bebebe
-                --fg-3: #a0a0a0
-                --fg-4: #818181
-                --fg-5: #636363
-            }
+            { darkModeColors }
         }
 
         // Change styles.
