@@ -14,7 +14,7 @@
 @var checkbox navbar  'Enable sticky navbar' 1
 @var checkbox blurry  'Enable blurry navbar style' 1
 @var checkbox newBars 'Enable new styles for nav/footer bars' 1
-@var checkbox monitor 'Enable dark mode for Monitor route' 1
+@var checkbox monitor 'Enable tweaks for Monitor page' 1
 ==/UserStyle== */
 
 // This userstyle uses Stylus-lang preprocessor.
@@ -108,13 +108,8 @@
         footer > div { border-radius: 0.5rem 0.5rem 0 0 }
     }
 
-    // Feat -> Dark mode for Monitor route.
+    // Feat -> Tweaks for Monitor page.
     if monitor {
-        // Dark mode colors.
-        @media (prefers-color-scheme: dark) {
-            { darkModeColors }
-        }
-
         // Change styles.
         body > .wrapper {
             padding: 30px 8px
@@ -141,7 +136,11 @@
 
         // Dark mode tweaks.
         @media (prefers-color-scheme: dark) {
-            html { scrollbar-color: var(--bg-5) var(--bg-2) }
+            :root {
+                { darkModeColors }
+                scrollbar-color: var(--bg-5) var(--bg-2)
+            }
+
             body {
                 color: var(--fg-1)
                 background-color: var(--bg-1)
