@@ -67,8 +67,8 @@
     if blurry {
         @supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
             // Setting class conditionally. Interop new- and old-bar styles.
-            class = (newBars) ? '> div[class]' : ''
-            forceDark = (colors) ? i : ''
+            class = (newBars) ? '> div[class]' : ()
+            forceDark = (colors) ? i : ()
 
             // Generate it.
             nav { class } {
