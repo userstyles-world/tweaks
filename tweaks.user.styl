@@ -107,7 +107,9 @@
         body > main { min-height: calc(100vh - 128px) i }
         footer > div { border-radius: 0.5rem 0.5rem 0 0 }
     }
+}
 
+@-moz-document regexp("https?://(userstyles.world|localhost)(:[0-9]+)?/monitor") {
     // Feat -> Tweaks for Monitor page.
     if monitor {
         // Change styles.
@@ -136,6 +138,7 @@
 
         // Dark mode tweaks.
         @media (prefers-color-scheme: dark) {
+            // Always apply dark mode colors.
             :root {
                 { darkModeColors }
                 scrollbar-color: var(--bg-5) var(--bg-2)
