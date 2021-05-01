@@ -15,6 +15,7 @@
 @var checkbox blurry  'Enable blurry navbar style' 1
 @var checkbox stylus  'Enable "Get Stylus" button' 1
 @var checkbox newBars 'Enable new styles for nav/footer bars' 1
+@var checkbox version 'Show userstyle version in the footer' 1
 @var checkbox monitor 'Enable tweaks for Monitor page' 1
 ==/UserStyle== */
 
@@ -47,7 +48,7 @@
 
     // Embed userstyle version.
     :root {
-        --version: 'version 1.2.1'
+        --version: 'USw Tweaks v1.2.1'
 
         // Feat -> Force dark mode.
         if colors {
@@ -112,6 +113,28 @@
         nav > div { border-radius: 0 0 0.5rem 0.5rem }
         body > main { min-height: calc(100vh - 128px) i }
         footer > div { border-radius: 0.5rem 0.5rem 0 0 }
+    }
+
+    // Feat -> Show userstyle version in footer.
+    if version {
+        footer .wrapper {
+            // Left side.
+            :nth-child(1)::after {
+                margin-left: 1rem
+                padding-left: 1rem
+                display: inline-block
+                content: var(--version) i
+                border-left: 1px solid var(--bg-5)
+            }
+
+            // Right side.
+            :nth-child(2) {
+                margin-left: auto
+                margin-right: 1rem
+                padding-right: 1rem
+                border-right: 1px solid var(--bg-5)
+            }
+        }
     }
 }
 
