@@ -13,6 +13,7 @@
 @var checkbox colors  'Force dark mode' 1
 @var checkbox navbar  'Enable sticky navbar' 1
 @var checkbox blurry  'Enable blurry navbar style' 1
+@var checkbox stylus  'Enable "Get Stylus" button' 1
 @var checkbox newBars 'Enable new styles for nav/footer bars' 1
 @var checkbox monitor 'Enable tweaks for Monitor page' 1
 ==/UserStyle== */
@@ -84,6 +85,11 @@
                 }
             }
         }
+    }
+
+    // Feat -> Stylus button.
+    if !stylus {
+        #stylus { display: none }
     }
 
     // Feat -> New nav/footer styles.
