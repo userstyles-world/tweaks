@@ -95,6 +95,8 @@
 
     // Feat -> New nav/footer styles.
     if newBars {
+        r = var(--br-2) // helper
+
         nav,
         footer {
             border: none
@@ -110,9 +112,9 @@
             }
         }
 
-        nav > div { border-radius: 0 0 0.5rem 0.5rem }
+        nav > div { border-radius: 0 0 r r }
         body > main { min-height: calc(100vh - 128px) i }
-        footer > div { border-radius: 0.5rem 0.5rem 0 0 }
+        footer > div { border-radius: r r 0 0 }
     }
 
     // Feat -> Show userstyle version in footer.
