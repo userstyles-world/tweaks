@@ -11,6 +11,7 @@
 @license      MIT
 
 @var checkbox colors  'Force dark mode' 1
+@var checkbox oldDark 'Old dark mode colors' 0
 @var checkbox navbar  'Enable sticky navbar' 1
 @var checkbox blurry  'Enable blurry navbar style' 1
 @var checkbox stylus  'Enable "Get Stylus" button' 1
@@ -29,21 +30,21 @@
 
     // Dark mode color variables.
     darkModeColors = @block {
-        --bg-1: #101010
-        --bg-2: #1d1d1d
-        --bg-3: #2a2a2a
-        --bg-4: #363636
-        --bg-5: #434343
-        --fg-1: #dddddd
-        --fg-2: #bebebe
-        --fg-3: #a0a0a0
-        --fg-4: #818181
-        --fg-5: #636363
-        --ac-1: #679cd0
-        --ac-2: #3673af
-        --ac-3: #2d5f90
-        --ac-4: #234a71
-        --ac-5: #193652
+        --bg-1: (oldDark) ? #101010 : #1a1a1a
+        --bg-2: (oldDark) ? #1d1d1d : #272727
+        --bg-3: (oldDark) ? #2a2a2a : #343434
+        --bg-4: (oldDark) ? #363636 : #404040
+        --bg-5: (oldDark) ? #434343 : #4d4d4d
+        --fg-1: (oldDark) ? #dddddd : #dddddd
+        --fg-2: (oldDark) ? #bebebe : #bebebe
+        --fg-3: (oldDark) ? #a0a0a0 : #a0a0a0
+        --fg-4: (oldDark) ? #818181 : #919191
+        --fg-5: (oldDark) ? #636363 : #636363
+        --ac-1: (oldDark) ? #679cd0 : #679cd0
+        --ac-2: (oldDark) ? #3673af : #3673af
+        --ac-3: (oldDark) ? #2d5f90 : #2d5f90
+        --ac-4: (oldDark) ? #234a71 : #234a71
+        --ac-5: (oldDark) ? #193652 : #193652
     }
 
     // Embed userstyle version.
@@ -53,6 +54,13 @@
         // Feat -> Force dark mode.
         if colors {
             { darkModeColors }
+        }
+
+        // Feat -> Old dark mode colors.
+        if oldDark {
+            @media (prefers-color-scheme: dark) {
+                { darkModeColors }
+            }
         }
     }
 
