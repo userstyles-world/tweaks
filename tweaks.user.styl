@@ -78,19 +78,19 @@
         @supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
             // Setting class conditionally. Interop new- and old-bar styles.
             class = (newBars) ? '> div[class]' : ()
-            forceDark = (colors) ? i : ()
+            check = (colors == 1 && oldDark == 1)
+            forceDark = (check) ? i : ()
 
             // Generate it.
             nav { class } {
-                $c = #1d1d1d
+                $c = (check) ? #1d1d1d : #272727
                 background-color: transparentify($c, $c, 0.8) forceDark
                 backdrop-filter: blur(4px) saturate(150%)
                 -webkit-backdrop-filter: blur(4px) saturate(150%)
 
                 @media (prefers-color-scheme: light) {
-                    $c = #d0d0d0
-                    background-color: transparentify($c, $c, 0.7)
-                    background-color: #d0d0d0c0
+                    $c = #dadada
+                    background-color: transparentify($c, $c, 0.8)
                 }
             }
         }
