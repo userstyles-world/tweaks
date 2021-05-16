@@ -119,27 +119,24 @@
 
     // Feat -> Show userstyle version in footer.
     if version {
-        footer .wrapper {
-            // Left side.
-            :nth-child(1)::after {
-                margin-left: 1rem
-                padding-left: 1rem
-                display: inline-block
-                content: var(--version) i
-                border-left: 1px solid var(--bg-5)
-            }
+        @media screen and (min-width: 965px) {
+            footer .wrapper > :nth-child(1) {
+                position: relative
 
-            // Right side.
-            :nth-child(2) {
-                if newBars {
-                    margin: 1rem 1rem 1rem auto
-                    padding: 0 1rem 0 0
-                } else {
-                    margin-left: auto
-                    margin-right: 1rem
-                    padding-right: 1rem
+                // Version.
+                &::before {
+                    right: -200px
+                    width: 200px
+                    position: absolute
+                    content: var(--version) i
                 }
-                border-right: 1px solid var(--bg-5)
+
+                // Divider.
+                &::after {
+                    content: '/'
+                    padding: 0 0.5rem
+                    color: var(--fg-5)
+                }
             }
         }
     }
