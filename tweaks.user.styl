@@ -49,7 +49,7 @@
 
     // Embed userstyle version.
     :root {
-        --version: 'USw Tweaks v1.4.0'
+        --version: 'UserStyles.world Tweaks v1.4.0'
 
         // Feat -> Force dark mode.
         if colors {
@@ -127,24 +127,14 @@
 
     // Feat -> Show userstyle version in footer.
     if version {
-        @media screen and (min-width: 965px) {
-            footer .wrapper > :nth-child(1) {
-                position: relative
+        .Footer .about {
+            margin-top: 2rem
 
-                // Version.
-                &::before {
-                    right: -200px
-                    width: 200px
-                    position: absolute
-                    content: var(--version) i
-                }
-
-                // Divider.
-                &::after {
-                    content: '/'
-                    padding: 0 0.5rem
-                    color: var(--fg-5)
-                }
+            &::before {
+                margin-top: -2rem
+                position: absolute
+                width: max-content
+                content: var(--version)
             }
         }
     }
