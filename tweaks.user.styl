@@ -105,24 +105,20 @@
     if newBars {
         r = var(--br-2) // helper
 
-        nav,
-        footer {
+        nav {
             border: none
             background: none
 
             > div {
                 padding-top: 0 i
                 padding-bottom: 0px i
+                border-radius: 0 0 r r
                 background-color: var(--bg-2)
                 box-shadow: 0 0 0 1px var(--bg-1)
 
                 > * { padding: 1rem 0 }
             }
         }
-
-        nav > div { border-radius: 0 0 r r }
-        body > main { min-height: calc(100vh - 128px) i }
-        footer > div { border-radius: r r 0 0 }
     }
 
     // Feat -> Show userstyle version in footer.
